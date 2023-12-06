@@ -1,0 +1,14 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    {% if request.user.is_authenticated %}
+        <h1>Bem Vindo</h1>
+        Bem vindo <br>
+        <a href="/logouts/">Sair</a><br>
+        <a href="/formChangePassword/">Trocar senha</a>
+
+
+    {% else %}
+        Você não tem acesso!
+    {% endif %} 
+{% endblock %}
